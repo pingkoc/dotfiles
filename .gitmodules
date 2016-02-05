@@ -4,9 +4,6 @@
 [submodule "vim/bundle/syntastic.vim"]
 	path = vim/bundle/syntastic.vim
 	url = https://github.com/scrooloose/syntastic
-[submodule "vim/vim-airline.vim"]
-	path = vim/vim-airline.vim
-	url = https://github.com/vim-airline/vim-airline
 [submodule "vim/bundle/vim-colors-solarized.vim"]
 	path = vim/bundle/vim-colors-solarized.vim
 	url = https://github.com/altercation/vim-colors-solarized
