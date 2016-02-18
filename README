@@ -12,8 +12,11 @@ VIM Config Installations
     
     Create symlinks:
     
+        To VIMRC:
         ln -s ~/dotfiles/vim/vimrc ~/.vimrc
         ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+        To VIM Directory:
+        ln -s ~/dotfiles/vim ~/.vim
     
     Switch to the `~/dotfiles/vim` directory, and fetch submodules:
     

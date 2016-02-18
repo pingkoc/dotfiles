@@ -3,8 +3,6 @@
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set runtimepath=~/dotfiles/vim
-
 " Pathogen
 call pathogen#infect()
 call pathogen#helptags()
@@ -154,6 +152,7 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
+filetype on
 
 " Set extra options when running in GUI mode
 if has('gui_running')
@@ -166,7 +165,7 @@ else
 endif
 
 " Set color scheme
-let g:solarized_termcolors=16
+set term=screen-256color
 colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
