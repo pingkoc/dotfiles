@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/pingkoc/QWalkResearch/openmp_test'
-let g:netrw_dirhist_2='/home/pingkoc/QWalkResearch/MeetingNotes'
-let g:netrw_dirhist_3='/home/pingkoc/QWalkResearch'
-let g:netrw_dirhist_4='/home/pingkoc/QWalkResearch/openmp_test'
-let g:netrw_dirhist_5='/home/pingkoc/QWalkResearch/MeetingNotes'
-let g:netrw_dirhist_6='/home/pingkoc/QWalkResearch'
-let g:netrw_dirhist_7='/home/pingkoc/QWalkResearch/openmp_test'
-let g:netrw_dirhist_8='/home/pingkoc/UIUC/Junior/QWalkResearch/MeetingNotes'
-let g:netrw_dirhist_9='/home/pingkoc/UIUC/Junior/QWalkResearch/openmp_test'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/pingkoc/Insync/UIUC/Junior/cs461/sp16-ece422/WorkSpace/mp4'
