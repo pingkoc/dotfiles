@@ -8,7 +8,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -166,7 +166,7 @@ endif
 
 " Set color scheme
 set term=screen-256color
-colorscheme solarized
+"colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
