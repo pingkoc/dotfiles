@@ -4,7 +4,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Pathogen
-call pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 call pathogen#helptags()
 
 " Indent Guides
