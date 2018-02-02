@@ -29,3 +29,18 @@ VIM Config Installations
 
     Solarized Terminal for theme compatibility:
         https://github.com/tomislav/osx-terminal.app-colors-solarized
+
+Spacemacs:
+    Install emacs
+    Install spacemacs
+        git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+    Initialize spacemacs then link
+        ln -s ~/dotfiles/spacemacs/.spacemacs ~/.spacemacs
+
+Oh My ZSH:
+    Install ZSH and Oh My ZSH:
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    Soft Link
+        ln -s ~/dotfiles/ohmyzsh/.zshrc ~/.zshrc
+    Set Terminal Profile to run zsh instead of bash
+    
