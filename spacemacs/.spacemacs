@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     javascript
      octave
      csv
      yaml
@@ -40,7 +41,7 @@ values."
      haskell
      ;; javascript
      html
-     python
+     (python :variables python-enable-yapf-format-on-save t)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -341,8 +342,6 @@ you should place your code here."
 
   ;; Python YAPF
   (add-hook 'python-mode-hook 'yapf-mode)
-  (setq-default dotspacemacs-configuration-layers '(
-                                                    (python :variables python-enable-yapf-format-on-save t)))
 
   ;; Smartparens
   (remove-hook 'prog-mode-hook #'smartparens-mode)
@@ -394,7 +393,7 @@ you should place your code here."
   ;;   (let ((evil-this-register ?0))
   ;;     (call-interactively 'evil-paste-after)))
   ;; (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
- )
+  )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
