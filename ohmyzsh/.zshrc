@@ -1,18 +1,17 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pingkoc/.oh-my-zsh
-# Anaconda
-  export PATH=$HOME/anaconda3/bin:$PATH
+  # export ZSH=/home/pingkoc/.oh-my-zsh # Uncomment for Linux
+  export ZSH=/Users/pingkoc/.oh-my-zsh # Uncomment for Mac
 # Vim as svn editor
   export SVN_EDITOR="/usr/bin/vim"
-# Zotero
-  export PATH=${PATH}:/opt/Zotero_linux-x86_64
+# # Zotero
+#   export PATH=${PATH}:/opt/Zotero_linux-x86_64
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="refined"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -64,6 +63,8 @@ plugins=(git web-search)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

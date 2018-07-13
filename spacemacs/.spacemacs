@@ -31,17 +31,19 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     python
      javascript
      octave
      csv
      yaml
      rust
      ;; ruby
+     osx
      markdown
      haskell
      ;; javascript
      html
-     (python :variables python-enable-yapf-format-on-save t)
+     (python :variables python-enable-yapf-format-on-save nil)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -55,12 +57,14 @@ values."
      emacs-lisp
      git
      ranger
+     gtags
      semantic
      latex
      markdown
      org
      (shell :variables
-            shell-default-shell 'multi-term)
+            shell-default-shell 'multi-term
+            shell-default-term-shell "/bin/zsh")
      (spell-checking :variables spell-checking-enable-by-default nil)
      ;; version-control
      )
@@ -340,15 +344,12 @@ you should place your code here."
   (add-hook 'text-mode-hook 'visual-line-mode)
   ;; (global-visual-line-mode 1) ; 1 for on, 0 for off.
 
-  ;; Python YAPF
-  (add-hook 'python-mode-hook 'yapf-mode)
+  ;; ;; Python YAPF
+  ;; (add-hook 'python-mode-hook 'yapf-mode)
 
   ;; Smartparens
   (remove-hook 'prog-mode-hook #'smartparens-mode)
   (spacemacs/toggle-smartparens-globally-off)
-
-  ;; Set zsh
-  (setq multi-term-program "/bin/zsh")
 
   ;; Spaceline
   (setq powerline-default-separator 'arrow)
@@ -386,6 +387,11 @@ you should place your code here."
                               (setq-default indent-tabs-mode nil)
                               (setq-default tab-width 4)
                               (setq indent-line-function 'insert-tab)))
+  ;; aspell for Mac
+  (setq ispell-program-name "/usr/local/bin/aspell")
+
+  ;; iedit fix when git and gtags active
+  (setq ggtags-highlight-tag nil)
 
   ;; Paste same register
   ;; (defun evil-paste-after-from-0 ()
@@ -397,3 +403,17 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (helm-gtags ggtags auctex-latexmk reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toml-mode toc-org tagedit stickyfunc-enhance srefactor spaceline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs ranger rainbow-delimiters racer pyvenv pytest pyenv-mode py-isort pug-mode powerline popwin pip-requirements persp-mode pcre2el paradox spinner orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-plus-contrib org-mime org-download org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode linum-relative link-hint json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc intero indent-guide hydra hy-mode hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile helm-hoogle helm-gitignore request helm-flycheck helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip pos-tip flycheck-haskell flycheck pkg-info epl flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit ghub with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump disaster diminish define-word cython-mode csv-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-ghci company-ghc ghc haskell-mode company-cabal company-c-headers company-auctex company-anaconda company column-enforce-mode coffee-mode cmm-mode cmake-mode clean-aindent-mode clang-format cargo markdown-mode rust-mode bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-dictionary auto-compile packed auctex anaconda-mode pythonic f s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup solarized-theme dash))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
