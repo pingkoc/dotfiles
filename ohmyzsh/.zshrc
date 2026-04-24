@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
-  # export ZSH=/home/pingkoc/.oh-my-zsh # Uncomment for Linux
-  export ZSH=/Users/pingkoc/.oh-my-zsh # Uncomment for Mac
+  export ZSH=$HOME/.oh-my-zsh
 # Vim as svn editor
   export SVN_EDITOR="/usr/bin/vim"
 # # Zotero
@@ -64,7 +63,7 @@ plugins=(git web-search)
 
 source $ZSH/oh-my-zsh.sh
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
