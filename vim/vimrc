@@ -28,6 +28,9 @@ Plug 'tpope/vim-sleuth'
 " Indent guides
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Colorscheme
+Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 " VIMRC from Amir Salihefendic
@@ -142,6 +145,10 @@ set termguicolors
 
 " Dark background
 set background=dark
+
+" Colorscheme (contrast: soft, medium, hard)
+let g:gruvbox_contrast_dark = 'medium'
+silent! colorscheme gruvbox
 
 " GUI-only options
 if has('gui_running')
