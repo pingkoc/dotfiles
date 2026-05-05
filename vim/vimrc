@@ -28,6 +28,9 @@ Plug 'tpope/vim-sleuth'
 " Indent guides
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+
 " Colorscheme
 Plug 'morhetz/gruvbox'
 
