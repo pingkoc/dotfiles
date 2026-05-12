@@ -1,6 +1,6 @@
 Installation:
 
-    git clone git://github.com/pingkoc/dotfiles.git ~/dotfiles
+    git clone https://github.com/pingkoc/dotfiles.git ~/dotfiles
 
 TMUX Config Installation
 
@@ -27,13 +27,6 @@ VIM Config Installation
         brew install ripgrep
 
     fzf is installed automatically by vim-plug.
-
-Spacemacs:
-    Install emacs
-    Install spacemacs
-        git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-    Initialize spacemacs then link
-        ln -s ~/dotfiles/spacemacs/.spacemacs ~/.spacemacs
 
 Oh My ZSH:
     Install ZSH and Oh My ZSH:
