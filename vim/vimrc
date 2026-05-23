@@ -32,7 +32,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 
 " Colorscheme
-Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -143,15 +143,17 @@ set tm=500
 syntax enable
 filetype on
 
-" 24-bit true color
-set termguicolors
+" Use iTerm2's 16 ANSI colors (already mapped to solarized palette)
+" Do NOT enable termguicolors — that would bypass the terminal palette.
+set t_Co=16
 
-" Dark background
+" Match your iTerm2 profile (change to 'light' if you use solarized light)
 set background=dark
 
-" Colorscheme (contrast: soft, medium, hard)
-let g:gruvbox_contrast_dark = 'medium'
-silent! colorscheme gruvbox
+let g:solarized_termcolors = 16
+let g:solarized_visibility = 'normal'
+let g:solarized_contrast = 'normal'
+silent! colorscheme solarized
 
 " GUI-only options
 if has('gui_running')
