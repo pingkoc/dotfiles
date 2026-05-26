@@ -7,6 +7,8 @@ plugins=(git web-search)
 
 export PATH="/Users/pingko/.local/bin/:$PATH"
 
-source $ZSH/oh-my-zsh.sh
-
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Only initialize oh-my-zsh if not already loaded (allows sourcing from work zshrc)
+if ! type omz &>/dev/null; then
+    source $ZSH/oh-my-zsh.sh
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
